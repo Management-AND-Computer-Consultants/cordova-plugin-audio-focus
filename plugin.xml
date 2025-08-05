@@ -26,8 +26,8 @@
     <description>Cordova Audio Focus Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,audio,focus</keywords>
-    <repo>https://github.com/your-username/cordova-plugin-audio-focus</repo>
-    <issue>https://github.com/your-username/cordova-plugin-audio-focus/issues</issue>
+    <repo>https://github.com/Management-AND-Computer-Consultants/cordova-plugin-audio-focus</repo>
+    <issue>https://github.com/Management-AND-Computer-Consultants/cordova-plugin-audio-focus/issues</issue>
 
     <engines>
         <engine name="cordova" version=">=9.0.0"/>

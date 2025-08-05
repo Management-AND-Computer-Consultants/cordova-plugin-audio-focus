@@ -207,4 +207,4 @@ This project is licensed under the Apache License, Version 2.0. See the [LICENSE
 
 ## Issues
 
-If you find any issues, please report them on the [GitHub issues page](https://github.com/your-username/cordova-plugin-audio-focus/issues). 
+If you find any issues, please report them on the [GitHub issues page](https://github.com/Management-AND-Computer-Consultants/cordova-plugin-audio-focus/issues). 

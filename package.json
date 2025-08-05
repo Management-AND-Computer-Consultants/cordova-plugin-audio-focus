@@ -1,7 +1,8 @@
 {
   "name": "cordova-plugin-audio-focus",
   "version": "1.0.0",
-  "description": "Cordova Audio Focus Plugin",
+  "description": "A Cordova plugin that provides audio focus management for microphone usage in Cordova applications",
+  "main": "www/AudioFocus.js",
   "types": "./types/index.d.ts",
   "cordova": {
     "id": "cordova-plugin-audio-focus",
@@ -11,12 +12,20 @@
       "browser"
     ]
   },
-  "repository": "github:your-username/cordova-plugin-audio-focus",
-  "bugs": "https://github.com/your-username/cordova-plugin-audio-focus/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Management-AND-Computer-Consultants/cordova-plugin-audio-focus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Management-AND-Computer-Consultants/cordova-plugin-audio-focus/issues"
+  },
+  "homepage": "https://github.com/Management-AND-Computer-Consultants/cordova-plugin-audio-focus#readme",
   "keywords": [
     "cordova",
     "audio",
     "focus",
+    "microphone",
+    "recording",
     "ecosystem:cordova",
     "cordova-android",
     "cordova-ios",
@@ -26,7 +35,7 @@
     "test": "npm run lint",
     "lint": "eslint ."
   },
-  "author": "Your Name",
+  "author": "Management AND Computer Consultants",
   "license": "Apache-2.0",
   "engines": {
     "cordovaDependencies": {
