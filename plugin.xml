@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-audio-focus"
+    version="1.0.0">
+    <name>Audio Focus</name>
+    <description>Cordova Audio Focus Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,audio,focus</keywords>
+    <repo>https://github.com/your-username/cordova-plugin-audio-focus</repo>
+    <issue>https://github.com/your-username/cordova-plugin-audio-focus/issues</issue>
+
+    <engines>
+        <engine name="cordova" version=">=9.0.0"/>
+        <engine name="cordova-android" version=">=10.0.0" />
+        <engine name="cordova-ios" version=">=5.1.0" />
+    </engines>
+
+    <js-module src="www/AudioFocus.js" name="AudioFocus">
+        <clobbers target="navigator.audioFocus" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AudioFocus">
+                <param name="android-package" value="org.apache.cordova.audiofocus.AudioFocusPlugin"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        </config-file>
+
+        <source-file src="src/android/AudioFocusPlugin.java" target-dir="src/org/apache/cordova/audiofocus" />
+
+        <preference name="ANDROIDX_CORE_VERSION" default="1.6.+"/>
+        <framework src="androidx.core:core:$ANDROIDX_CORE_VERSION" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AudioFocus">
+                <param name="ios-package" value="AudioFocusPlugin" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/AudioFocusPlugin.h" />
+        <source-file src="src/ios/AudioFocusPlugin.m" />
+    </platform>
+
+    <!-- browser -->
+    <platform name="browser">
+        <js-module src="src/browser/AudioFocusProxy.js" name="AudioFocusProxy">
+            <runs />
+        </js-module>
+    </platform>
+</plugin> 
